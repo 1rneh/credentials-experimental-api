@@ -5,9 +5,9 @@
     "functions": [],
     "events": [
       {
-        "name": "onPassword",
+        "name": "onPasswordReceived",
         "type": "function",
-        "description": "Fired when the password manager sends password to child process.",
+        "description": "Fired when the password manager sends login information to child process.",
         "parameters": [
           {
             "name": "password",

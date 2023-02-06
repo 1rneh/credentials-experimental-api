@@ -1,4 +1,4 @@
-const TOPIC = "secure-password-manager-extension";
+const TOPIC = "secure-credential-provision";
 
 this.credentials = class extends ExtensionAPI {
   getAPI(context) {
@@ -7,7 +7,7 @@ this.credentials = class extends ExtensionAPI {
     return {
       experiments: {
         credentials: {
-          onPassword: new EventManager({
+          onPasswordReceived: new EventManager({
             context,
             name: "experiments.credentials.onPassword",
             register: (fire) => {

@@ -1,7 +1,7 @@
 [
   {
     "namespace": "experiments.credentials",
-    "description": "Firefox Credential Provision API",
+    "description": "Firefox Credential API",
     "functions": [],
     "events": [
       {

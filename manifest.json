@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "version": "1.0",
-    "name": "Extension containing an experimental API",
+    "name": "Firefox Credential API",
     "experiment_apis": {
         "credentials": {
             "schema": "schema.json",

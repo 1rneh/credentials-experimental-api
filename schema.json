@@ -1,0 +1,20 @@
+[
+  {
+    "namespace": "experiments.credentials",
+    "description": "Firefox Credential Provision API",
+    "functions": [],
+    "events": [
+      {
+        "name": "onPassword",
+        "type": "function",
+        "description": "Fired when the password manager sends password to child process.",
+        "parameters": [
+          {
+            "name": "password",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

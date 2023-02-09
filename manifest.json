@@ -2,6 +2,11 @@
     "manifest_version": 3,
     "version": "1.0",
     "name": "Firefox Credential API",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "credentials@experiments.addons.mozilla.org"
+        }
+    },
     "experiment_apis": {
         "credentials": {
             "schema": "schema.json",
@@ -11,10 +16,11 @@
                 ],
                 "paths": [
                     [
+                        "experiemnts",
                         "credentials"
                     ]
                 ],
-                "script": "implementation.js"
+                "script": "api.js"
             }
         }
     }

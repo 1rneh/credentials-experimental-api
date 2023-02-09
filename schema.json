@@ -1,17 +1,17 @@
 [
   {
     "namespace": "experiments.credentials",
-    "description": "Firefox Credential API",
-    "functions": [],
+    "description": "API supporting credential provision",
     "events": [
       {
         "name": "onPasswordReceived",
         "type": "function",
-        "description": "Fired when the password manager sends login information to child process.",
+        "description": "Fired before the password manager sends login information to child process.",
         "parameters": [
           {
             "name": "password",
-            "type": "string"
+            "type": "string",
+            "description": "the real password"
           }
         ]
       }

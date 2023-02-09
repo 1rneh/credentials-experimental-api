@@ -14,7 +14,7 @@ this.credentials = class extends ExtensionAPI {
             name: "experiments.credentials.onPasswordReceived",
             register: (fire) => {
               let observer = (pw) => {
-                fire.sync(pw);
+                fire.async(pw);
               };
               Services.obs.addObserver(observer, TOPIC);
               return () => {

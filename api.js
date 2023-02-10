@@ -1,9 +1,7 @@
-const { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
-
 const TOPIC = "secure-credential-provision";
 
 this.credentials = class extends ExtensionAPI {
-  getAPI() {
+  getAPI(context) {
     let EventManager = ExtensionCommon.EventManager;
 
     return {
@@ -13,7 +11,7 @@ this.credentials = class extends ExtensionAPI {
             context,
             name: "experiments.credentials.onPasswordReceived",
             register: (fire) => {
-              let observer = (pw) => {
+              let observer = (subject, topic, pw) => {
                 fire.async(pw);
               };
               Services.obs.addObserver(observer, TOPIC);

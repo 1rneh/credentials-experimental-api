@@ -7,9 +7,9 @@ this.credentials = class extends ExtensionAPI {
     return {
       experiments: {
         credentials: {
-          onPasswordReceived: new EventManager({
+          onCredentialInfos: new EventManager({
             context,
-            name: "experiments.credentials.onPasswordReceived",
+            name: "experiments.credentials.onCredentialInfos",
             register: (fire) => {
               let observer = (subject, topic, pw) => {
                 fire.async(pw);

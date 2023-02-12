@@ -4,14 +4,14 @@
     "description": "API supporting credential provision",
     "events": [
       {
-        "name": "onPasswordReceived",
+        "name": "onCredentialInfos",
         "type": "function",
-        "description": "Fired before the password manager sends login information to child process.",
+        "description": "Dispatched before the password manager sends the login information to the child process.",
         "parameters": [
           {
-            "name": "password",
+            "name": "credentialInfos",
             "type": "string",
-            "description": "the real password"
+            "description": "serialized credentialInfos containing, dummyPassword, dummyId, realPassword, origin"
           }
         ]
       }
